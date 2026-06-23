@@ -1,0 +1,168 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\definecolor{accent}{HTML}{4B3F72}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\color{accent}\scshape\raggedright\large
+}{}{0em}{}[\color{accent}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape \color{accent} Makayla Choudary} \\ \vspace{1pt}
+    \small \href{mailto:mgc9912@nyu.edu}{\underline{mgc9912@nyu.edu}} $|$ 
+    \href{https://linkedin.com/in/makayla-choudary}{\underline{linkedin.com/in/makayla-choudary}} $|$
+    \href{https://github.com/makayla-chou}{\underline{github.com/makayla-chou}}
+     $|$
+    \href{https://makayla-chou.github.io/personal_website/}{\underline{personal website}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {New York University}{New York, New York}
+      {Bachelor of Science in Computer Engineering}{Expected Graduation: May 2027}
+      \resumeItemListStart
+        \resumeItem{Relevant Coursework: Data Structures, Computer Architecture, Machine Learning, Digital Logic, Circuits, Linear Algebra, Statistics}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Data Analytics Intern}{Summer 2025}
+      {Travel Resorts of America}{Remote / North Carolina}
+      \resumeItemListStart
+        \resumeItem{Built and automated Power BI dashboards tracking occupancy, cancellations, and site utilization across multiple resort properties, improving visibility into operational performance.}
+        \resumeItem{Designed Excel Power Query transformations and DAX measures to standardize key operational metrics, including unused sites and active reservations.}
+        \resumeItem{Developed Python and Databricks workflows using Snowflake datasets to analyze loan delinquency milestones across 30/60/90/120+ day thresholds.}
+        \resumeItem{Implemented Collibra Data Quality rules to validate completeness and identify discrepancies across booking, financial, and site-level data sources.}
+        \resumeItem{Delivered executive-facing performance reports used to support operational planning, reporting accuracy, and management decision-making.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{CatOps - Agentic Reinforcement Learning Cat Simulator} $|$ \emph{Python, Streamlit, Pandas, Plotly}}{Summer 2026}
+      \resumeItemListStart
+        \resumeItem{Built an interactive reinforcement learning simulator where virtual cat agents learn action policies using Q-learning across balanced, strict, and chaotic environments.}
+        \resumeItem{Developed an agentic decision loop that observes cat states, selects actions from learned Q-values, explains decisions, reflects on outcomes, and stores session memory.}
+        \resumeItem{Created Streamlit dashboards to visualize reward trends, action frequencies, scratch behavior, learned policies, and Q-learning performance against a random baseline.}
+      \resumeItemListEnd
+
+      \resumeProjectHeading
+      {\textbf{Predictive Maintenance ML System} $|$ \emph{Python, pandas, scikit-learn, Jupyter, Git/GitHub}}{Summer 2026}
+      \resumeItemListStart
+        \resumeItem{Built a machine learning pipeline to predict equipment failure risk from industrial sensor data using temperature, torque, rotational speed, and tool wear features.}
+        \resumeItem{Addressed severe class imbalance, with failures representing 3.39\% of samples, by prioritizing recall and F2 score over accuracy.}
+        \resumeItem{Compared Logistic Regression, Random Forest, and Gradient Boosting models, applying threshold optimization to prioritize failure detection.}
+        \resumeItem{Evaluated models using confusion matrices, recall, F2 score, and feature importance to compare failure detection performance.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{LSTM Time-Series Prediction Project} $|$ \emph{Python, pandas, scikit-learn, matplotlib, Jupyter, Git}}{Spring 2025}
+      \resumeItemListStart
+        \resumeItem{Built and trained an LSTM neural network to model sequential time-series data and forecast future values.}
+        \resumeItem{Created preprocessing workflows for data cleaning, normalization, train-test splitting, and sequence generation.}
+        \resumeItem{Evaluated model performance using prediction plots and error metrics to compare predicted values against actual trends.}
+        \resumeItem{Experimented with architecture depth, sequence length, and hyperparameters to improve forecasting accuracy.}
+      \resumeItemListEnd
+
+ 
+
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages:} Python, C++, Java, SQL \\
+     \textbf{Data/ML:} pandas, NumPy, scikit-learn, matplotlib, Power BI, Excel Power Query, DAX \\
+     \textbf{Cloud/Data Tools:} Databricks, Snowflake, Collibra Data Quality \\
+     \textbf{Hardware/Engineering:} Raspberry Pi, Arduino, GPIO, motor control, digital logic, circuits \\
+     \textbf{Developer Tools:} Git, GitHub, Jupyter Notebook
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
